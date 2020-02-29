@@ -22,7 +22,17 @@ public class BinaryGenerator {
         this.userInputStringInLowerCase = userInputStringInLowerCase;
     }
 
+    private String binary(String userInputStringInLowerCase) {
+        char[] chars = userInputStringInLowerCase.toCharArray();
+        String binaryCode = "";
+        for (int i = 0; i < chars.length; i++) {
+            int letters = chars[i];
+            binaryCode = binaryCode + Integer.toBinaryString(letters);
+        }
+        return binaryCode;
+    }
+
     public String convertNormalStringToBinaryString() {
-        return "";
+        return null;
     }
 }
