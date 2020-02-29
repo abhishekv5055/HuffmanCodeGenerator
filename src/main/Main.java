@@ -17,15 +17,16 @@ public class Main {
         System.out.println("Please enter a string value: ");
         final Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine().trim();
-        BinaryGenerator binaryGenerator = new BinaryGenerator(userInput);
+        BinaryGenerator binaryGenerator = new BinaryGenerator(userInput.toLowerCase());
         String binaryString = binaryGenerator.convertNormalStringToBinaryString();
         HuffmanGenerator huffmanGenerator = new HuffmanGenerator(userInput);
         String huffmanString = huffmanGenerator.convertNormalStringToHuffmanString();
-        int lengthOfBinaryString = binaryString.length();
+        int lengthOfBinaryString = binaryString.trim().length();
         int lengthOfHuffmanString = huffmanString.length();
         System.out.println("The binary string has " + lengthOfBinaryString + " characters.");
         System.out.println("The huffman string has " + lengthOfHuffmanString + " characters.");
-        System.out.println("Compression Ratio (Huffman/Binary): " + (lengthOfHuffmanString / lengthOfBinaryString) + "%");
+        System.out.println(huffmanString);
+        System.out.println("Compression Ratio (Huffman/Binary): " + ((double) lengthOfHuffmanString / (double) lengthOfBinaryString) + "%");
         scanner.close();
     }
 }
