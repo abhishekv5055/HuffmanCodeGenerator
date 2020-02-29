@@ -83,6 +83,6 @@ public class HuffmanGenerator {
     }
 
     public String convertNormalStringToHuffmanString() {
-        return null;
+        return huffmanCode(userInputStringInLowerCase);
     }
 }
