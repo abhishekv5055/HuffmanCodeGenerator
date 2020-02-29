@@ -33,6 +33,6 @@ public class BinaryGenerator {
     }
 
     public String convertNormalStringToBinaryString() {
-        return null;
+        return binary(userInputStringInLowerCase);
     }
 }
